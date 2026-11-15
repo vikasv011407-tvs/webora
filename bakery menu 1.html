@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet Crumbs Bakery</title>
+
+    <link rel="stylesheet" href="bakery menu 1.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Sweet<span>Crumbs</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#menu" class="order-btn">Order Now</a>
+
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            FRESH • HOMEMADE • DELICIOUS
+        </p>
+
+        <h1>
+            Freshly Baked
+            <span>Happiness</span>
+        </h1>
+
+        <p>
+            Delicious cakes, pastries, breads and desserts
+            freshly prepared every day using quality ingredients.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#menu" class="primary-btn">
+                Explore Menu
+            </a>
+
+            <a href="#contact" class="secondary-btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+        <img src="images/hero-cake.jpg"
+             alt="Fresh bakery cake">
+
+        <div class="rating-card">
+            ⭐ 4.9
+            <small>Customer Rating</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature">
+        <span>🥐</span>
+        <h3>Freshly Baked</h3>
+        <p>Fresh bakery products every morning.</p>
+    </div>
+
+    <div class="feature">
+        <span>🌾</span>
+        <h3>Premium Ingredients</h3>
+        <p>Only quality ingredients are used.</p>
+    </div>
+
+    <div class="feature">
+        <span>🚚</span>
+        <h3>Fast Delivery</h3>
+        <p>Fresh products delivered to your door.</p>
+    </div>
+
+    <div class="feature">
+        <span>❤️</span>
+        <h3>Made With Love</h3>
+        <p>Every product is prepared with care.</p>
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="menu-section" id="menu">
+
+    <div class="section-heading">
+
+        <p>OUR MENU</p>
+
+        <h2>
+            Choose Your
+            <span>Favourite</span>
+        </h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+        <button onclick="filterMenu('all')">
+            All
+        </button>
+
+        <button onclick="filterMenu('cake')">
+            Cakes
+        </button>
+
+        <button onclick="filterMenu('pastry')">
+            Pastries
+        </button>
+
+        <button onclick="filterMenu('bread')">
+            Breads
+        </button>
+
+        <button onclick="filterMenu('drink')">
+            Drinks
+        </button>
+
+    </div>
+
+
+    <!-- MENU CARDS -->
+
+    <div class="menu-grid">
+
+
+        <!-- CHOCOLATE CAKE -->
+
+        <div class="menu-card cake">
+
+            <div class="food-image">
+
+                <img src="images/chocolate-cake.jpg"
+                     alt="Chocolate Cake">
+
+                <span class="popular">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Chocolate Cake</h3>
+
+                <p>
+                    Rich chocolate cake with creamy
+                    chocolate frosting.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹450</strong>
+
+                    <button onclick="addToOrder('Chocolate Cake')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STRAWBERRY CAKE -->
+
+        <div class="menu-card cake">
+
+            <div class="food-image">
+
+                <img src="images/strawberry-cake.jpg"
+                     alt="Strawberry Cake">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Strawberry Cake</h3>
+
+                <p>
+                    Soft vanilla sponge with fresh
+                    strawberry cream.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹500</strong>
+
+                    <button onclick="addToOrder('Strawberry Cake')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CROISSANT -->
+
+        <div class="menu-card pastry">
+
+            <div class="food-image">
+
+                <img src="images/croissant.jpg"
+                     alt="Butter Croissant">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Butter Croissant</h3>
+
+                <p>
+                    Crispy, buttery and freshly baked
+                    croissant.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹120</strong>
+
+                    <button onclick="addToOrder('Butter Croissant')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUPCAKE -->
+
+        <div class="menu-card pastry">
+
+            <div class="food-image">
+
+                <img src="images/cupcake.jpg"
+                     alt="Vanilla Cupcake">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Vanilla Cupcake</h3>
+
+                <p>
+                    Soft vanilla cupcake with creamy
+                    frosting.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹90</strong>
+
+                    <button onclick="addToOrder('Vanilla Cupcake')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BREAD -->
+
+        <div class="menu-card bread">
+
+            <div class="food-image">
+
+                <img src="images/bread.jpg"
+                     alt="Fresh Milk Bread">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Fresh Milk Bread</h3>
+
+                <p>
+                    Soft and fluffy bread baked fresh
+                    every morning.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹70</strong>
+
+                    <button onclick="addToOrder('Fresh Milk Bread')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BAGUETTE -->
+
+        <div class="menu-card bread">
+
+            <div class="food-image">
+
+                <img src="images/baguette.jpg"
+                     alt="French Baguette">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>French Baguette</h3>
+
+                <p>
+                    Crispy French bread with a soft
+                    centre.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹150</strong>
+
+                    <button onclick="addToOrder('French Baguette')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COFFEE -->
+
+        <div class="menu-card drink">
+
+            <div class="food-image">
+
+                <img src="images/cappuccino.jpg"
+                     alt="Cappuccino">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Cappuccino</h3>
+
+                <p>
+                    Smooth coffee with creamy milk foam.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹140</strong>
+
+                    <button onclick="addToOrder('Cappuccino')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHAKE -->
+
+        <div class="menu-card drink">
+
+            <div class="food-image">
+
+                <img src="images/chocolate-shake.jpg"
+                     alt="Chocolate Shake">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>Chocolate Shake</h3>
+
+                <p>
+                    Thick and creamy chocolate milkshake.
+                </p>
+
+                <div class="bottom">
+
+                    <strong>₹180</strong>
+
+                    <button onclick="addToOrder('Chocolate Shake')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-photo">
+
+        <img src="images/hero-cake.jpg"
+             alt="Sweet Crumbs Bakery">
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="small-title">
+            OUR STORY
+        </p>
+
+        <h2>
+            Baking Memories
+            <span>Every Day</span>
+        </h2>
+
+        <p>
+            SweetCrumbs Bakery was created with one simple
+            idea — to make fresh, delicious bakery products
+            that make every moment special.
+        </p>
+
+        <p>
+            From birthday cakes to morning bread,
+            everything is freshly prepared with care.
+        </p>
+
+        <a href="#contact" class="primary-btn">
+            Visit Our Bakery
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section class="offer" id="offers">
+
+    <div>
+
+        <p>LIMITED TIME OFFER</p>
+
+        <h2>
+            Get <span>20% OFF</span>
+            Your First Order
+        </h2>
+
+        <p>
+            Use coupon code
+            <strong>SWEET20</strong>
+        </p>
+
+        <a href="#menu">
+            Order Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>
+            Visit
+            <span>SweetCrumbs</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div>
+            <span>📍</span>
+            <h3>Location</h3>
+            <p>Salem, Tamil Nadu</p>
+        </div>
+
+        <div>
+            <span>📞</span>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+        <div>
+            <span>✉️</span>
+            <h3>Email</h3>
+            <p>hello@sweetcrumbs.com</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        Sweet<span>Crumbs</span>
+    </h2>
+
+    <p>
+        Freshly baked happiness, every single day.
+    </p>
+
+    <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">WhatsApp</a>
+    </div>
+
+    <small>
+        © 2026 SweetCrumbs Bakery
+    </small>
+
+</footer>
+
+
+<script>
+    // MENU FILTER
+
+function filterMenu(category) {
+
+    const cards = document.querySelectorAll(".menu-card");
+
+    cards.forEach(card => {
+
+        if (category === "all") {
+
+            card.style.display = "block";
+
+        } else {
+
+            if (card.classList.contains(category)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        }
+
+    });
+
+}
+
+
+// ADD TO ORDER
+
+function addToOrder(item) {
+
+    alert(
+        item +
+        " added to your order! 🍰"
+    );
+
+}
+</script>
+
+</body>
+</html>
